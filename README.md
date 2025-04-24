@@ -11,6 +11,9 @@ This project implements a modern design system suitable for enterprise applicati
 - Theming support
 - Comprehensive documentation
 
+## Video Link:
+https://drive.google.com/file/d/1_y6jiyhNkAOihHugJoMHBzyccz7cuKSz/view?usp=drive_link
+
 ## Components
 
 ### Typography Components
