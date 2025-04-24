@@ -1,0 +1,49 @@
+import{j as t}from"./jsx-runtime-DR9Q75dM.js";import{r as a}from"./index-DRjF_FHU.js";import{c as y,a as M}from"./utils-BpMXP6K7.js";import{X as P,I as K,C as L,T as Q}from"./x-D_kjBb9T.js";const U=M("fixed pointer-events-auto flex w-full max-w-sm items-center gap-2 rounded-md border p-4 shadow-lg",{variants:{position:{"top-left":"top-4 left-4","top-right":"top-4 right-4","top-center":"top-4 left-1/2 -translate-x-1/2","bottom-left":"bottom-4 left-4","bottom-right":"bottom-4 right-4","bottom-center":"bottom-4 left-1/2 -translate-x-1/2"},type:{info:"bg-info/10 border-info text-info-foreground",success:"bg-success/10 border-success text-success-foreground",warning:"bg-warning/10 border-warning text-warning-foreground",error:"bg-destructive/10 border-destructive text-destructive-foreground"}},defaultVariants:{position:"bottom-right",type:"info"}}),X=a.createContext(void 0),j=({title:r,description:e,type:s="info",duration:o=5e3,onClose:n,className:i,id:l,...c})=>{const[u,f]=a.useState(!0);a.useEffect(()=>{const J=setTimeout(()=>{N()},o);return()=>clearTimeout(J)},[o]);const N=()=>{f(!1),setTimeout(()=>{n==null||n()},300)},G={info:t.jsx(K,{className:"h-5 w-5 text-info"}),success:t.jsx(L,{className:"h-5 w-5 text-success"}),warning:t.jsx(Q,{className:"h-5 w-5 text-warning"}),error:t.jsx(P,{className:"h-5 w-5 text-destructive"})};return t.jsxs("div",{role:"alert","aria-live":"assertive",className:y(U({type:s,className:i}),u?"animate-toast-in":"animate-toast-out"),...c,children:[t.jsx("div",{className:"flex-shrink-0",children:G[s]}),t.jsxs("div",{className:"flex-1",children:[r&&t.jsx("h4",{className:"font-medium text-sm mb-1",children:r}),t.jsx("p",{className:"text-sm",children:e})]}),t.jsx("button",{type:"button",onClick:N,className:"text-foreground/50 hover:text-foreground","aria-label":"Close",children:t.jsx(P,{className:"h-4 w-4"})})]})},p=({children:r,position:e="bottom-right"})=>{const[s,o]=a.useState([]),n=c=>{const u=Math.random().toString(36).substring(2,9);o(f=>[...f,{...c,id:u}])},i=c=>{o(u=>u.filter(f=>f.id!==c))},l=()=>{o([])};return t.jsxs(X.Provider,{value:{toasts:s,addToast:n,removeToast:i,clearToasts:l},children:[r,t.jsx("div",{className:y("fixed z-50",{"top-0 left-0":e==null?void 0:e.includes("top-left"),"top-0 right-0":e==null?void 0:e.includes("top-right"),"top-0 left-1/2 -translate-x-1/2":e==null?void 0:e.includes("top-center"),"bottom-0 left-0":e==null?void 0:e.includes("bottom-left"),"bottom-0 right-0":e==null?void 0:e.includes("bottom-right"),"bottom-0 left-1/2 -translate-x-1/2":e==null?void 0:e.includes("bottom-center")}),children:s.map(c=>t.jsx(j,{...c,onClose:()=>i(c.id),className:U({position:e})},c.id))})]})},Y=()=>{const r=a.useContext(X);if(!r)throw new Error("useToast must be used within a ToastProvider");return r};j.__docgenInfo={description:"",methods:[],displayName:"Toast",props:{type:{defaultValue:{value:"'info'",computed:!1},required:!1},duration:{defaultValue:{value:"5000",computed:!1},required:!1}}};p.__docgenInfo={description:"",methods:[],displayName:"ToastProvider",props:{position:{defaultValue:{value:"'bottom-right'",computed:!1},required:!1}}};function ee(r,e){typeof r=="function"?r(e):r!=null&&(r.current=e)}function re(...r){return e=>r.forEach(s=>ee(s,e))}var Z=a.forwardRef((r,e)=>{const{children:s,...o}=r,n=a.Children.toArray(s),i=n.find(se);if(i){const l=i.props.children,c=n.map(u=>u===i?a.Children.count(l)>1?a.Children.only(null):a.isValidElement(l)?l.props.children:null:u);return t.jsx(b,{...o,ref:e,children:a.isValidElement(l)?a.cloneElement(l,void 0,c):null})}return t.jsx(b,{...o,ref:e,children:s})});Z.displayName="Slot";var b=a.forwardRef((r,e)=>{const{children:s,...o}=r;if(a.isValidElement(s)){const n=ne(s);return a.cloneElement(s,{...oe(o,s.props),ref:e?re(e,n):n})}return a.Children.count(s)>1?a.Children.only(null):null});b.displayName="SlotClone";var te=({children:r})=>t.jsx(t.Fragment,{children:r});function se(r){return a.isValidElement(r)&&r.type===te}function oe(r,e){const s={...e};for(const o in e){const n=r[o],i=e[o];/^on[A-Z]/.test(o)?n&&i?s[o]=(...c)=>{i(...c),n(...c)}:n&&(s[o]=n):o==="style"?s[o]={...n,...i}:o==="className"&&(s[o]=[n,i].filter(Boolean).join(" "))}return{...r,...s}}function ne(r){var o,n;let e=(o=Object.getOwnPropertyDescriptor(r.props,"ref"))==null?void 0:o.get,s=e&&"isReactWarning"in e&&e.isReactWarning;return s?r.ref:(e=(n=Object.getOwnPropertyDescriptor(r,"ref"))==null?void 0:n.get,s=e&&"isReactWarning"in e&&e.isReactWarning,s?r.props.ref:r.props.ref||r.ref)}const ae=M("inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",{variants:{variant:{default:"bg-primary text-primary-foreground hover:bg-primary/90",destructive:"bg-destructive text-destructive-foreground hover:bg-destructive/90",outline:"border border-input bg-background hover:bg-accent hover:text-accent-foreground",secondary:"bg-secondary text-secondary-foreground hover:bg-secondary/80",ghost:"hover:bg-accent hover:text-accent-foreground",link:"text-primary underline-offset-4 hover:underline"},size:{default:"h-10 px-4 py-2",sm:"h-9 rounded-md px-3",lg:"h-11 rounded-md px-8",icon:"h-10 w-10"}},defaultVariants:{variant:"default",size:"default"}}),w=a.forwardRef(({className:r,variant:e,size:s,asChild:o=!1,...n},i)=>{const l=o?Z:"button";return t.jsx(l,{className:y(ae({variant:e,size:s,className:r})),ref:i,...n})});w.displayName="Button";w.__docgenInfo={description:"",methods:[],displayName:"Button",props:{asChild:{required:!1,tsType:{name:"boolean"},description:"",defaultValue:{value:"false",computed:!1}}},composes:["VariantProps"]};const ue={title:"Design System/Feedback/Toast",component:j,tags:["autodocs"],argTypes:{type:{control:"select",options:["info","success","warning","error"]},title:{control:"text"},description:{control:"text"},duration:{control:"number"}},args:{title:"Notification",description:"This is a toast notification message.",type:"info",duration:5e3},decorators:[r=>t.jsx(p,{children:t.jsx(r,{})})]},d=({type:r})=>{const{addToast:e}=Y();return t.jsxs(w,{variant:"outline",onClick:()=>e({title:`${r.charAt(0).toUpperCase()+r.slice(1)} Toast`,description:`This is a ${r} toast message.`,type:r,duration:3e3}),children:["Show ",r," Toast"]})},m={args:{type:"info"}},g={args:{type:"success"}},x={args:{type:"warning"}},h={args:{type:"error"}},v={render:()=>t.jsxs("div",{className:"flex gap-4",children:[t.jsx(d,{type:"info"}),t.jsx(d,{type:"success"}),t.jsx(d,{type:"warning"}),t.jsx(d,{type:"error"})]})},T={render:()=>t.jsxs("div",{className:"space-y-4",children:[t.jsxs("div",{className:"flex gap-4",children:[t.jsx(p,{position:"top-left",children:t.jsx(d,{type:"info"})}),t.jsx(p,{position:"top-center",children:t.jsx(d,{type:"success"})}),t.jsx(p,{position:"top-right",children:t.jsx(d,{type:"warning"})})]}),t.jsxs("div",{className:"flex gap-4",children:[t.jsx(p,{position:"bottom-left",children:t.jsx(d,{type:"info"})}),t.jsx(p,{position:"bottom-center",children:t.jsx(d,{type:"success"})}),t.jsx(p,{position:"bottom-right",children:t.jsx(d,{type:"warning"})})]})]})};var S,E,C;m.parameters={...m.parameters,docs:{...(S=m.parameters)==null?void 0:S.docs,source:{originalSource:`{
+  args: {
+    type: 'info'
+  }
+}`,...(C=(E=m.parameters)==null?void 0:E.docs)==null?void 0:C.source}}};var V,_,R;g.parameters={...g.parameters,docs:{...(V=g.parameters)==null?void 0:V.docs,source:{originalSource:`{
+  args: {
+    type: 'success'
+  }
+}`,...(R=(_=g.parameters)==null?void 0:_.docs)==null?void 0:R.source}}};var k,I,W;x.parameters={...x.parameters,docs:{...(k=x.parameters)==null?void 0:k.docs,source:{originalSource:`{
+  args: {
+    type: 'warning'
+  }
+}`,...(W=(I=x.parameters)==null?void 0:I.docs)==null?void 0:W.source}}};var A,D,O;h.parameters={...h.parameters,docs:{...(A=h.parameters)==null?void 0:A.docs,source:{originalSource:`{
+  args: {
+    type: 'error'
+  }
+}`,...(O=(D=h.parameters)==null?void 0:D.docs)==null?void 0:O.source}}};var q,z,B;v.parameters={...v.parameters,docs:{...(q=v.parameters)==null?void 0:q.docs,source:{originalSource:`{
+  render: () => <div className="flex gap-4">\r
+      <ToastTrigger type="info" />\r
+      <ToastTrigger type="success" />\r
+      <ToastTrigger type="warning" />\r
+      <ToastTrigger type="error" />\r
+    </div>
+}`,...(B=(z=v.parameters)==null?void 0:z.docs)==null?void 0:B.source}}};var F,H,$;T.parameters={...T.parameters,docs:{...(F=T.parameters)==null?void 0:F.docs,source:{originalSource:`{
+  render: () => <div className="space-y-4">\r
+      <div className="flex gap-4">\r
+        <ToastProvider position="top-left">\r
+          <ToastTrigger type="info" />\r
+        </ToastProvider>\r
+        <ToastProvider position="top-center">\r
+          <ToastTrigger type="success" />\r
+        </ToastProvider>\r
+        <ToastProvider position="top-right">\r
+          <ToastTrigger type="warning" />\r
+        </ToastProvider>\r
+      </div>\r
+      <div className="flex gap-4">\r
+        <ToastProvider position="bottom-left">\r
+          <ToastTrigger type="info" />\r
+        </ToastProvider>\r
+        <ToastProvider position="bottom-center">\r
+          <ToastTrigger type="success" />\r
+        </ToastProvider>\r
+        <ToastProvider position="bottom-right">\r
+          <ToastTrigger type="warning" />\r
+        </ToastProvider>\r
+      </div>\r
+    </div>
+}`,...($=(H=T.parameters)==null?void 0:H.docs)==null?void 0:$.source}}};const pe=["InfoToast","SuccessToast","WarningToast","ErrorToast","ToastDemo","PositionExamples"];export{h as ErrorToast,m as InfoToast,T as PositionExamples,g as SuccessToast,v as ToastDemo,x as WarningToast,pe as __namedExportsOrder,ue as default};
